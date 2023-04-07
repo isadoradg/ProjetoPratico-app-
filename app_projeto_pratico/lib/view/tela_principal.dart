@@ -20,18 +20,28 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Gastronomy"),
+        //title: Text("Gastronomy"),
         backgroundColor: const Color.fromARGB(255, 188, 138, 60),
       ),
 
-      body: Column(
+      body: SingleChildScrollView(
+        child: Column(
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset('image/logotipo-app.PNG',),              
+            ]
+            //,height: 205, width: 211, -> imagem
+          ),
           Expanded(
+            
             //width: MediaQuery.of(context).size.width*1.0,
             //flex: 1,
             child: login(context),
           ),
         ]
+      ),
       ),
 
 
@@ -49,24 +59,25 @@ login(context){
     child: Container(
       
       padding: EdgeInsets.all(20),
-      //color: const Color.fromARGB(255, 188, 138, 60),
+      color:  Color.fromARGB(255, 188, 138, 60),
 
       child: Column(
         children: [
+
           // campo de texto para receber o email
-            Container(// campo de insersão do nome
-            padding: EdgeInsets.all(20),
-              child: TextField(
-                controller: txtEmail,
-                decoration: InputDecoration(
-                  labelText: 'email',
-                  labelStyle: TextStyle(fontSize: 18),
-                  //icon: Icon(Icons.person), 
-                  border: OutlineInputBorder(),
-                ),
+          Container(// campo de insersão do nome
+          padding: EdgeInsets.all(20),
+            child: TextField(
+              controller: txtEmail,
+              decoration: InputDecoration(
+                labelText: 'email',
+                labelStyle: TextStyle(fontSize: 18),
+                //icon: Icon(Icons.person), 
+                border: OutlineInputBorder(),
               ),
-              //color: const Color.fromARGB(255, 188, 138, 60),
             ),
+              //color: const Color.fromARGB(255, 188, 138, 60),
+          ),
 
           SizedBox(
               height: 5,
@@ -95,7 +106,7 @@ login(context){
                   labelText: 'senha',
                   labelStyle: TextStyle(
                     fontSize: 18,
-                    color: Colors.black,
+                    //color: Colors.black,
                   ),
                   border: OutlineInputBorder(),
 
