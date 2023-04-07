@@ -2,10 +2,10 @@
 	"receitas": [{
 			"receita": "Barrinhas de cereal",
 			"ingredientes": "1 xícara de nozes, 1 xícara de frutas secas, 1 xícara de tâmaras secas sem caroço",
-			"ingredientesBase": {
+			"ingredientesBase": { 
 				"0": "3",
 				"1": "Nozes",
-				"2": "Frutas secas",
+				"2": "Frutas secas", 
 				"3": "Tamaras"
 			},
 			"modoPreparo": "Bata todos os ingredientes em um processador por cerca de dois minutos, até que formem uma massa. Embrulhe a mistura em um papel filme e leve à geladeira por algumas horas até sentir que a massa está dura. Corte em formato de barras e conserve na geladeira.",
