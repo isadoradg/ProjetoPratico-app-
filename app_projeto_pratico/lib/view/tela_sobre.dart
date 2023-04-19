@@ -9,7 +9,7 @@ class TelaSobreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //title: Text("Primeira App"),
+        title: Text("Sobre o App"),
         backgroundColor: const Color.fromARGB(255, 188, 138, 60),
       ),
       body: Column(
@@ -20,20 +20,18 @@ class TelaSobreApp extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             alignment: Alignment.topCenter,
             width: 500,
-            height: 270,
+            height: 250,
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(),
             ),
-            child: Text("Um dos meus maiores hobbies é cozinhar, tanto a comida do dia a dia quanto bolos de aniversário (o que eu mais faço). Então, a ideia do aplicativo de culinária (Gastronomy Receitas) é juntar várias receitas (doces, salgados e do dia a dia) para auxiliar e ser de uso prático na hora de cozinhar. Ele está sendo desenvolvido pela Isadora Domingos, o qual seu protótipo foi feito no segundo semestre de 2021 (na matéria de Interação Humano Computador (IHC) do curso de Análise e Desenvolvimento de Sistemas (ADS)) e está saindo do papel no primeiro semestre de 2023 (na matéria de Programação em Dispositivos Móveis, no mesmo curso de ADS). /foto/", style: TextStyle(fontSize: 15)),
+            child: Text("Um dos meus maiores hobbies é cozinhar, tanto a comida do dia a dia quanto bolos de aniversário (o que eu mais faço). Então, a ideia do aplicativo de culinária (Gastronomy Receitas) é juntar várias receitas (doces, salgados e do dia a dia) para auxiliar e ser de uso prático na hora de cozinhar. Ele está sendo desenvolvido pela Isadora Domingos, o qual seu protótipo foi feito no segundo semestre de 2021 (na matéria de Interação Humano Computador (IHC) do curso de Análise e Desenvolvimento de Sistemas (ADS)) e está saindo do papel no primeiro semestre de 2023 (na matéria de Programação em Dispositivos Móveis, no mesmo curso de ADS). (A foto abaixo é ilustrativa do(a) desenvolvedor(a).)", style: TextStyle(fontSize: 15)),
           ),
-          /*Container(
-            child: Center( 
-              child: Image.asset('lib/image/profile-dev-isadora.jpeg', alignment: Alignment.bottomCenter, height: 234, width: 234,),
-            ),
-          ),*/
-          //Image(image: 'image/profile-dev-isadora.jpg',),
-          
+
+          Container(
+            alignment: Alignment.topCenter,
+            child: Center(child: Image.asset('lib/image/profile-dev-isadora.jpeg',height: 234, width: 234, alignment: Alignment.bottomCenter,),)
+          ),
         ],
       ),
 
