@@ -32,7 +32,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
 
           Container(// campo de insersão do nome
             padding: EdgeInsets.all(20),
-              child: TextField(
+              child:TextField(
                 controller: txtNome,
                 decoration: InputDecoration(
                   labelText: 'Nome',
@@ -41,7 +41,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   border: OutlineInputBorder(),
                 ),
               ),
-              //color: const Color.fromARGB(255, 188, 138, 60),
+            //color: const Color.fromARGB(255, 188, 138, 60),
           ),
 
           SizedBox(
@@ -101,7 +101,11 @@ class _TelaCadastroState extends State<TelaCadastro> {
             onPressed: () {
               //verificar campos
               Navigator.pop(context);
-
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: const Text('Cadastro realizado com sucesso!'),
+                ),
+              );
             }, 
             child: const Text("Cadastrar"),
           ),
