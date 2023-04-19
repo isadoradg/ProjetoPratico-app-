@@ -29,13 +29,11 @@ class _TelaEsqueciSenhaState extends State<TelaEsqueciSenha> {
             ),
 
             Center(
-              child: Text(
-                "Escreva o seu e-mail abaixo e enviamos \n        instruções para redefini-la.",
+              child: Text("Escreva o seu e-mail abaixo e enviamos \n        instruções para redefini-la.",
                 style: TextStyle(
                   fontSize: 20,
                 ),
               ),
-
             ),
 
             Container(// campo de insersão do nome
@@ -63,6 +61,11 @@ class _TelaEsqueciSenhaState extends State<TelaEsqueciSenha> {
               onPressed: () {
                 //verificar campos
                 Navigator.pop(context);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: const Text('Instruções enviadas. Por favor, verifique o email!'),
+                  ),
+                );
               }, 
               child: const Text("Enviar instruções"),
             ),
@@ -74,6 +77,7 @@ class _TelaEsqueciSenhaState extends State<TelaEsqueciSenha> {
   }
 }
 
+/*
 alterarSenha(context){
   var txtEmail = TextEditingController();
 
@@ -107,6 +111,7 @@ alterarSenha(context){
     ],
   );
 }
+*/
 
 
 
