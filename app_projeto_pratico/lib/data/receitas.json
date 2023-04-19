@@ -1,5 +1,5 @@
-{
-	"receitas": [{
+[
+	{
 			"receita": "Barrinhas de cereal",
 			"ingredientes": "1 xícara de nozes, 1 xícara de frutas secas, 1 xícara de tâmaras secas sem caroço",
 			"ingredientesBase": { 
@@ -304,5 +304,4 @@
 			"modoPreparo": "Pré-aqueça o forno a 190°. Em uma vasilha misture 4 ovos inteiros, 1 xícara de brócolis (só as flores picadas) e 1/2 xícara de queijo cheddar ralado ou outro queijo de sua preferência. Leve ao forno de 12 a 15 minutos, até que o ovo esteja assado.",
 			"link_imagem":"http://www.vilamulher.com.br/imagens/default/2014/01/14/muffins-de-brocolis-com-cheddar-6-75-1467.jpg"
 		}
-	]
-}
+]
