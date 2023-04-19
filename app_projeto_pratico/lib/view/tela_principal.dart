@@ -35,9 +35,6 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
         ]
       ),
     );
-
-
-    
   }
 }
 
@@ -63,7 +60,7 @@ login(context){
               controller: txtEmail,
               decoration: InputDecoration(
                 labelText: 'email',
-                labelStyle: TextStyle(fontSize: 18, ),
+                labelStyle: TextStyle(fontSize: 18, color: Colors.white),
                 //icon: Icon(Icons.person), 
                 border: OutlineInputBorder(),
               ),
@@ -84,11 +81,12 @@ login(context){
                   labelText: 'senha',
                   labelStyle: TextStyle(
                     fontSize: 18,
-                    //color: Colors.black,
+                    color: Colors.white
                   ),
                   border: OutlineInputBorder(),
-
+                  
                 ),
+
                 
               ),
               //color: const Color.fromARGB(255, 188, 138, 60),
@@ -100,8 +98,9 @@ login(context){
 
           // campo para caso o usuario esquecer a senha
           TextButton(
-            
             onPressed: () {
+              txtEmail.clear();
+              txtSenha.clear();
               Navigator.pushNamed(context, '/trocar-senha');
             },
             style: TextButton.styleFrom(
@@ -122,6 +121,9 @@ login(context){
               foregroundColor: Colors.black,
             ),
             onPressed: () {
+              // limpar campos
+              txtEmail.clear();
+              txtSenha.clear();
               Navigator.pushNamed(context, '/inicial');
             }, 
             child: const Text("Login"),
@@ -138,6 +140,8 @@ login(context){
             ),            
             child: Text('Nao tem conta? Cadastre-se!'),
             onPressed: () {
+              txtEmail.clear();
+              txtSenha.clear();
               Navigator.pushNamed(context, '/cadastro');
               //Navigator.push(context, MaterialPageRoute(builder: (context) => TelaCadastro()));
             },
