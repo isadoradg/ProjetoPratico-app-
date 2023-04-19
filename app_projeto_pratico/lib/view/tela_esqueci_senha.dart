@@ -23,7 +23,21 @@ class _TelaEsqueciSenhaState extends State<TelaEsqueciSenha> {
 
       body: Center(
         child: Column(
-          children: [ 
+          children: [
+            SizedBox(
+              height: 10,
+            ),
+
+            Center(
+              child: Text(
+                "Escreva o seu e-mail abaixo e enviamos \n        instruções para redefini-la.",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+
+            ),
+
             Container(// campo de insersão do nome
               padding: EdgeInsets.all(20),
                 child: TextField(
@@ -50,7 +64,7 @@ class _TelaEsqueciSenhaState extends State<TelaEsqueciSenha> {
                 //verificar campos
                 Navigator.pop(context);
               }, 
-              child: const Text("Enviar"),
+              child: const Text("Enviar instruções"),
             ),
           ],
         ),
