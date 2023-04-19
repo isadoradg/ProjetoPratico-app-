@@ -91,38 +91,7 @@ class _TelaLoginState extends State<TelaLogin> {
 
             SizedBox(
               height: 10,
-            ),
-
-            /*ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
-              ),
-              // Usando AlertDialog para apresentar sobre o aplicativo
-              /*onPressed: () => showDialog<String>(
-                context: context,
-                builder: (BuildContext context) => AlertDialog(
-                  title: const Text('Sobre o Aplicativo'),
-                  content: const Text('A escolha do tema voltado para culinária foi devido ao meu gosto por cozinhar. O objetivo da criação desse aplicativo é ser prático e auxiliar na busca por receitas. Esse App foi desenvolvido pela Isadora Domingos na disciplina de Programação para Dispositivos Móveis. /foto/',),
-                  actions: <Widget>[
-                    TextButton(
-                      onPressed: () => Navigator.pop(context, 'OK'),
-                      child: const Text('OK'),
-                    ),
-                  ],
-                ),
-              ), */
-              
-              onPressed: () {
-                //Navigator.pop(context);
-                //sobreAplicativo();
-                Navigator.pushNamed(context, '/sobre');
-              },
-              child: const Text("Sobre"), 
-            ),*/
-
-            
-      
+            ),      
           ],
         ),
       ),
