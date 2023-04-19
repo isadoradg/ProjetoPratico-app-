@@ -3,6 +3,7 @@
 import 'package:app_projeto_pratico/view/tela_cadastro.dart';
 import 'package:app_projeto_pratico/view/tela_esqueci_senha.dart';
 import 'package:app_projeto_pratico/view/tela_login.dart';
+import 'package:app_projeto_pratico/view/tela_sobre.dart';
 import 'view/tela_principal.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ void main() {
         '/cadastro': (context) => TelaCadastro(),
         '/trocar-senha':(context) => TelaEsqueciSenha(),
         '/inicial':(context) => TelaLogin(),
+        '/sobre':(context) => TelaSobreApp(),
       },
       
     )
