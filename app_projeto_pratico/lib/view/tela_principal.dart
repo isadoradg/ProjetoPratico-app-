@@ -24,28 +24,20 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
         backgroundColor: const Color.fromARGB(255, 188, 138, 60),
       ),
 
-      body: SingleChildScrollView(
-        child: Column(
+      body: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image.asset('image/logotipo-app.PNG',),              
-            ]
-            //,height: 205, width: 211, -> imagem
-          ),
+          Container(
+            color: const Color.fromARGB(255, 188, 138, 60),
+            child: Center(child: Image.asset('lib/image/logotipo-app.PNG', height: 344, width: 350,))),
           Expanded(
-            
-            //width: MediaQuery.of(context).size.width*1.0,
-            //flex: 1,
             child: login(context),
           ),
         ]
       ),
-      ),
-
-
     );
+
+
+    
   }
 }
 
@@ -58,7 +50,7 @@ login(context){
   return SingleChildScrollView(
     child: Container(
       
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.all(10),
       color:  Color.fromARGB(255, 188, 138, 60),
 
       child: Column(
@@ -71,7 +63,7 @@ login(context){
               controller: txtEmail,
               decoration: InputDecoration(
                 labelText: 'email',
-                labelStyle: TextStyle(fontSize: 18),
+                labelStyle: TextStyle(fontSize: 18, ),
                 //icon: Icon(Icons.person), 
                 border: OutlineInputBorder(),
               ),
@@ -80,25 +72,11 @@ login(context){
           ),
 
           SizedBox(
-              height: 5,
+              height: 10,
           ),
-            /*TextField(
-              //controller: txtEmail,
-              decoration: InputDecoration(
-                labelText: "e-mail",
-                labelStyle: TextStyle(
-                  fontSize: 10,
-                  color: Colors.black),
-                icon: Icon(Icons.email_outlined),
-              ),
-            ),
-
-          SizedBox(
-            height: 10,
-          ),*/
 
           // campo para receber a senha
-          Container(// campo de insersão do nome
+          Container(// campo de insersão da senha
             padding: EdgeInsets.all(20),
               child: TextField(
                 controller: txtSenha,
@@ -119,20 +97,7 @@ login(context){
           SizedBox(
               height: 5,
           ),
-          
-          /*TextField(
-            //controller: txtSenha,
-            decoration: InputDecoration(
-              labelText: "password",
-              labelStyle: TextStyle(
-                fontSize: 10,
-                color: Colors.black),
-              icon: Icon(Icons.password),
-            ),
-          ),*/
-          SizedBox(
-            height: 10,
-          ),
+
           // campo para caso o usuario esquecer a senha
           TextButton(
             
@@ -157,8 +122,7 @@ login(context){
               foregroundColor: Colors.black,
             ),
             onPressed: () {
-              //verificar campos
-
+              Navigator.pushNamed(context, '/inicial');
             }, 
             child: const Text("Login"),
           ),
@@ -171,12 +135,7 @@ login(context){
               textStyle: const TextStyle(
                 fontSize: 10,
               ),
-            ),/*
-            child: const Text("Nao tem conta? Cadastre-se!"),
-            onPressed: (){
-              Navigator.pushNamed(context, '/cadastro');
-              //Navigator.push(context, MaterialPageRoute(builder: ((context) => TelaCadastro()),);
-            },*/
+            ),            
             child: Text('Nao tem conta? Cadastre-se!'),
             onPressed: () {
               Navigator.pushNamed(context, '/cadastro');
@@ -187,25 +146,10 @@ login(context){
         ],
       ),
 
-
     ),
   );
 }
 
-// exibir uma mensagem
-/*  mensagem(msg){
-    ScaffoldMessenger.of(context).showSnackBar(
-      // barrinha que aparece e desapararece depois de alguns segundos
-      SnackBar(
-        duration: Duration(seconds: 2),
-        content: Text(
-          msg,
-          style: TextStyle(color: Colors.blueGrey.shade600),
-          ),
-        backgroundColor: Colors.blueGrey.shade50,
-      ),
-    );
-  }*/
 
 
 
