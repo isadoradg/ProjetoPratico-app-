@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:app_projeto_pratico/view/tela_cadastro.dart';
+import 'package:app_projeto_pratico/view/tela_configuracoes.dart';
 import 'package:app_projeto_pratico/view/tela_esqueci_senha.dart';
 import 'package:app_projeto_pratico/view/tela_login.dart';
 import 'package:app_projeto_pratico/view/tela_perfil.dart';
@@ -27,6 +28,7 @@ void main() {
         '/perfil':(context) => TelaPerfil(),
         '/receitas':(context) => TelaReceitas(),
         '/receitas-detalhes':(context) => TelaReceitasDetalhes(),
+        '/config':(context) => TelaConfiguracoes(),
       },
       
     )
