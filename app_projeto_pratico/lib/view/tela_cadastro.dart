@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, implementation_imports, sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:app_projeto_pratico/model/cadastro.dart';
+//import 'package:app_projeto_pratico/model/cadastro.dart';
 
 class TelaCadastro extends StatefulWidget {
   const TelaCadastro({super.key});
@@ -28,6 +28,14 @@ class _TelaCadastroState extends State<TelaCadastro> {
         children: [
           SizedBox(
               height: 5,
+          ),
+          
+          Center(
+            child: Text("Crie a sua conta no App Gastronomy! :)",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
           ),
 
           Container(// campo de insersão do nome
@@ -79,19 +87,6 @@ class _TelaCadastroState extends State<TelaCadastro> {
               ),
               //color: const Color.fromARGB(255, 188, 138, 60),
           ),
-
-          /*TextButton(
-            onPressed: (){
-              Navigator.pop(context);
-            },
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.black,
-              textStyle: const TextStyle(
-                fontSize: 10,
-              ),
-            ),
-            child: const Text("Cadastrar"),
-          ),*/
 
           ElevatedButton(
             style: ElevatedButton.styleFrom(
