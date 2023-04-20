@@ -103,7 +103,9 @@ class _TelaLoginState extends State<TelaLogin> {
                 //leading: Icon(Icons.search)),
                 title: Text("Pesquisar Receita"),
                 trailing: Icon(Icons.search),
-                onTap: () {}
+                onTap: () {
+                  Navigator.pop(context);
+                }
               ),
               ListTile(
                 leading: Icon(Icons.cookie_outlined),
@@ -115,20 +117,15 @@ class _TelaLoginState extends State<TelaLogin> {
               ListTile(
                 leading: Icon(Icons.star),
                 title: Text("Favoritos"),
-                onTap: () {}
-              ),
-              ListTile(
-                leading: Icon(Icons.account_circle),
-                title: Text("Perfil"),
                 onTap: () {
-                  Navigator.pushNamed(context, '/perfil');
+                  Navigator.pop(context);
                 }
               ),
               ListTile(
-                leading: Icon(Icons.book_outlined),
-                title: Text("Sobre"),
+                leading: Icon(Icons.manage_accounts),
+                title: Text("Configurações"),
                 onTap: () {
-                  Navigator.pushNamed(context, '/sobre');
+                  Navigator.pushNamed(context, '/config');
                 }
               ),
               
